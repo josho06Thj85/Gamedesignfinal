@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://bor7rhiaorjua"]
+
+[ext_resource type="Script" path="res://FavClub.gd" id="1_umwre"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6j24u"]
+font_size = 30
+
+[node name="FavClub" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_umwre")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 137.0
+offset_right = 910.0
+offset_bottom = 363.0
+theme_override_font_sizes/font_size = 30
+text = "hi"
+label_settings = SubResource("LabelSettings_6j24u")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btnShow" type="Button" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 495.0
+offset_right = 328.0
+offset_bottom = 637.0
+theme_override_font_sizes/font_size = 30
+text = "Show
+"
+
+[node name="btnClear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 497.0
+offset_right = 724.0
+offset_bottom = 639.0
+theme_override_font_sizes/font_size = 30
+text = "Clear
+"
+
+[node name="btnExit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 821.0
+offset_top = 497.0
+offset_right = 1142.0
+offset_bottom = 639.0
+theme_override_font_sizes/font_size = 30
+text = "Exit
+"
+
+[connection signal="pressed" from="btnShow" to="." method="_on_btn_show_pressed"]
+[connection signal="pressed" from="btnClear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="btnExit" to="." method="_on_btn_exit_pressed"]

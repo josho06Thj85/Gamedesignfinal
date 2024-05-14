@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2kjm0xluxue1"]
+
+[ext_resource type="Script" path="res://slash.gd" id="1_epvak"]
+[ext_resource type="PackedScene" uid="uid://pywg8g3ywdm" path="res://td_player.tscn" id="2_6vad6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7oulg"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation_1",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation_2",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation_3",
+"speed": 5.0
+}]
+
+[node name="slash" type="Node2D"]
+script = ExtResource("1_epvak")
+
+[node name="td_player" parent="." instance=ExtResource("2_6vad6")]
+position = Vector2(558, 338)
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="td_player"]
+sprite_frames = SubResource("SpriteFrames_7oulg")
+animation = &"new_animation"

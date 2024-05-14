@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://ryhwler65oo1"]
+
+[ext_resource type="Texture2D" uid="uid://waus8r8tpdlg" path="res://entities/objects.png" id="1_26rjn"]
+[ext_resource type="Script" path="res://entities/Small chest.gd" id="1_km6i1"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3ssai"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b78fm"]
+size = Vector2(27, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o4k0l"]
+radius = 23.3238
+
+[node name="Small chest" type="Node2D" groups=["chest", "interactable"]]
+position = Vector2(3348, 1534)
+script = ExtResource("1_km6i1")
+contents = null
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3333.51, -1523.49)
+scale = Vector2(2.18655, 2.00469)
+texture = ExtResource("1_26rjn")
+offset = Vector2(257.371, 154.758)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-3333, -1524)
+physics_material_override = SubResource("PhysicsMaterial_3ssai")
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_b78fm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_o4k0l")

@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://icq7rgrafco2"]
+
+[ext_resource type="Script" path="res://coin.gd" id="1_2pko6"]
+[ext_resource type="Texture2D" uid="uid://dfu70y2noedej" path="res://new folder/objects.png" id="1_lwdr2"]
+[ext_resource type="PackedScene" uid="uid://c810bsrmpkffb" path="res://health.tscn" id="3_h743t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypw0q"]
+atlas = ExtResource("1_lwdr2")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6xel"]
+atlas = ExtResource("1_lwdr2")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5cgk"]
+atlas = ExtResource("1_lwdr2")
+region = Rect2(32, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4shoy"]
+atlas = ExtResource("1_lwdr2")
+region = Rect2(48, 64, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hgoap"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypw0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6xel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5cgk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4shoy")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Coin" type="Node2D"]
+script = ExtResource("1_2pko6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(46, 606)
+scale = Vector2(4.75, 4.75)
+sprite_frames = SubResource("SpriteFrames_hgoap")
+animation = &"new_animation"
+frame_progress = 0.59272
+
+[node name="Health" parent="." instance=ExtResource("3_h743t")]
+position = Vector2(15, 48)
