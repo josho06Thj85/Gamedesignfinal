@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2nptvevm8f5y"]
+
+[ext_resource type="Script" path="res://My name.gd" id="1_03hf5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h41v1"]
+font_size = 30
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 3.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_03hf5")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 93.0
+offset_right = 924.0
+offset_bottom = 408.0
+text = "hi"
+label_settings = SubResource("LabelSettings_h41v1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 509.0
+offset_right = 362.0
+offset_bottom = 642.0
+theme_override_font_sizes/font_size = 30
+text = "Show"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 500.0
+offset_right = 763.0
+offset_bottom = 634.0
+theme_override_font_sizes/font_size = 30
+text = "Clear"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 820.0
+offset_top = 504.0
+offset_right = 1138.0
+offset_bottom = 634.0
+theme_override_font_sizes/font_size = 30
+text = "Exit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

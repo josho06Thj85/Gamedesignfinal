@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://cuqf16xcrkn6q"]
+
+[ext_resource type="PackedScene" uid="uid://icq7rgrafco2" path="res://coin.tscn" id="1_ypcxt"]
+[ext_resource type="PackedScene" uid="uid://c810bsrmpkffb" path="res://health.tscn" id="2_hcnco"]
+[ext_resource type="Texture2D" uid="uid://dfu70y2noedej" path="res://new folder/objects.png" id="3_b0ixi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywv3j"]
+atlas = ExtResource("3_b0ixi")
+region = Rect2(0, 42, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4u0rj"]
+atlas = ExtResource("3_b0ixi")
+region = Rect2(16, 42, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ouqx"]
+atlas = ExtResource("3_b0ixi")
+region = Rect2(32, 42, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgmud"]
+atlas = ExtResource("3_b0ixi")
+region = Rect2(48, 42, 16, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wkkmg"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywv3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4u0rj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ouqx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgmud")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="MeshTexture" id="MeshTexture_arsu4"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Coin" parent="." instance=ExtResource("1_ypcxt")]
+position = Vector2(27, 612)
+rotation = -3.14159
+
+[node name="Health" parent="." instance=ExtResource("2_hcnco")]
+position = Vector2(-213, 140)
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Health"]
+position = Vector2(240, -133)
+scale = Vector2(4.15625, 3.74518)
+sprite_frames = SubResource("SpriteFrames_wkkmg")
+animation = &"new_animation"
+
+[node name="Sprite2D2" type="Sprite2D" parent="Health"]
+position = Vector2(-7, -2)
+scale = Vector2(13, 12)
+texture = SubResource("MeshTexture_arsu4")

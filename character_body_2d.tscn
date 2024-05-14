@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyj3x74l5jm8f"]
+
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_i6wd8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_baji4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q5cb7"]
+radius = 25.0
+height = 52.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_i6wd8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_baji4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_q5cb7")
