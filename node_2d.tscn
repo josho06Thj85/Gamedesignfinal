@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://d3pti1nt7cw8v"]
+
+[ext_resource type="Texture2D" uid="uid://dfu70y2noedej" path="res://sprites/objects.png" id="1_8qigx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4dib"]
+atlas = ExtResource("1_8qigx")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jkuk"]
+atlas = ExtResource("1_8qigx")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ky8g8"]
+atlas = ExtResource("1_8qigx")
+region = Rect2(32, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0fdp"]
+atlas = ExtResource("1_8qigx")
+region = Rect2(48, 64, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m8p6r"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4dib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jkuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ky8g8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0fdp")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="MeshTexture" id="MeshTexture_odcy4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hveb6"]
+radius = 7.0
+height = 14.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 0)
+sprite_frames = SubResource("SpriteFrames_m8p6r")
+animation = &"new_animation"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-6, -6)
+scale = Vector2(11, 11)
+texture = SubResource("MeshTexture_odcy4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_hveb6")
+
+[node name="Area2D" type="Area2D" parent="CollisionShape2D"]
