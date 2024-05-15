@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://hs1rga7e5i34"]
+[gd_scene load_steps=10 format=3 uid="uid://hs1rga7e5i34"]
 
 [ext_resource type="Script" path="res://Enemy.gd" id="1_nmyyb"]
 [ext_resource type="Texture2D" uid="uid://csi4e566ww8ii" path="res://sprites/log.png" id="2_xopmm"]
@@ -60,8 +60,12 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h40o8"]
-radius = 30.0
-height = 88.0
+radius = 31.0
+height = 96.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8hbvy"]
+radius = 31.0
+height = 96.0
 
 [node name="Enemy" type="CharacterBody2D"]
 position = Vector2(557, 325)
@@ -72,10 +76,14 @@ position = Vector2(1.5, 1.5)
 scale = Vector2(2.59375, 2.59375)
 sprite_frames = SubResource("SpriteFrames_1muwx")
 animation = &"new_animation"
-frame = 2
-frame_progress = 0.0694579
+frame_progress = 0.386622
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_h40o8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_8hbvy")

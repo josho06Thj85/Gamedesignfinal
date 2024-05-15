@@ -146,18 +146,17 @@ animations = [{
 [sub_resource type="MeshTexture" id="MeshTexture_rpvhp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q5cb7"]
-radius = 51.0
-height = 146.0
+radius = 28.0
+height = 88.0
 
 [node name="Player1" type="CharacterBody2D"]
 script = ExtResource("1_i6wd8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(552.875, 284)
-scale = Vector2(5.39062, 5.29422)
+position = Vector2(535.521, 322.5)
+scale = Vector2(3.22135, 3.28125)
 sprite_frames = SubResource("SpriteFrames_baji4")
-animation = &"up"
-frame_progress = 0.571528
+animation = &"down"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-2.38419e-07, 1)
@@ -165,5 +164,5 @@ scale = Vector2(1150, 644)
 texture = SubResource("MeshTexture_rpvhp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(552, 287)
+position = Vector2(536, 325)
 shape = SubResource("CapsuleShape2D_q5cb7")
