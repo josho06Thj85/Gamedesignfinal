@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=10 format=3 uid="uid://d3pti1nt7cw8v"]
 
 [ext_resource type="Texture2D" uid="uid://dfu70y2noedej" path="res://sprites/objects.png" id="1_8qigx"]
@@ -49,10 +50,16 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hveb6"]
 radius = 7.0
 height = 14.0
+=======
+[gd_scene load_steps=2 format=3 uid="uid://d3pti1nt7cw8v"]
+
+[sub_resource type="TileSet" id="TileSet_yp1p4"]
+>>>>>>> Stashed changes
 
 [node name="BaseItem" type="Node2D"]
 script = ExtResource("1_fruff")
 
+<<<<<<< Updated upstream
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_m8p6r")
 animation = &"new_animation"
@@ -70,3 +77,8 @@ position = Vector2(-9.53674e-07, -9.53674e-07)
 scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_hveb6")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
+=======
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_yp1p4")
+format = 2
+>>>>>>> Stashed changes
