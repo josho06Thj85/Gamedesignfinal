@@ -61,11 +61,11 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h40o8"]
 radius = 31.0
-height = 96.0
+height = 86.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8hbvy"]
 radius = 31.0
-height = 96.0
+height = 86.0
 
 [node name="Enemy" type="CharacterBody2D"]
 position = Vector2(557, 325)
