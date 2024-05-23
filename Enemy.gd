@@ -53,9 +53,9 @@ signal recovered
 @onready var anim_player = $AnimatedSprite2D
 @onready var aud_player = $AudioStreamPlayer2D
 
-var drops = ["drop_coin", "drop_heart"]
+var drops = ["drop_gold", "drop_heart"]
 
-var coin_scene = preload("res://entities/coin.tscn")
+var gold_scene = preload("res://entities/gold.tscn")
 var heart_scene = preload("res://entities/mini_heart.tscn")
 var damage_shader = preload("res://assets/shaders/take_damage.tres")
 var death_sound = preload("res://assets/sounds/enemydeath.wav")
@@ -68,12 +68,12 @@ func drop_scene(item_scene):
 	get_tree().current_scene.add_child(item_scene)
 
 func drop_heart():
-	drop_scene(heart_scene.instantiate())
+	drop_scene(heart_scene.instantiate()
 
-func drop_coin():
-	var coin = coin_scene.instantiate()
-	coin.value = money_value
-	drop_scene(coin)
+func drop_gold():
+	var gold = gold_scene.instantiate() 
+	gold.value = money_value
+	drop_scene(gold)
 
 func drop_items():
 	var num_drops = randi() % 3 + 1

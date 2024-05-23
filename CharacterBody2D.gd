@@ -170,3 +170,4 @@ func update_animation(direction):
 		$AnimatedSprite2D.animation = a_name
 		$AnimatedSprite2D.play()
 	pass
+	

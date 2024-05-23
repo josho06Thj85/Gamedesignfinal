@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://btrytjp0lt424"]
+
+[ext_resource type="Script" path="res://control.gd" id="1_fc7u3"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_iqiic"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cldr5"]
+texture = SubResource("ImageTexture_iqiic")
+modulate_color = Color(0.3, 1, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qt1cm"]
+font_size = 50
+
+[node name="Home" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fc7u3")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 1152.0
+offset_bottom = 652.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_cldr5")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 169.0
+offset_right = 681.0
+offset_bottom = 260.0
+theme_override_font_sizes/font_size = 40
+text = "Start"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 389.0
+offset_right = 681.0
+offset_bottom = 477.0
+theme_override_font_sizes/font_size = 40
+text = "settings"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 284.0
+offset_right = 681.0
+offset_bottom = 370.0
+theme_override_font_sizes/font_size = 40
+text = "options "
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 2.0
+offset_right = 914.0
+offset_bottom = 151.0
+text = "          Name of the game "
+label_settings = SubResource("LabelSettings_qt1cm")
