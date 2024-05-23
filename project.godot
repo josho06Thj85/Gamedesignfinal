@@ -12,7 +12,6 @@ config_version=5
 
 config/name="Gamedesignfinal"
 config/features=PackedStringArray("4.1", "GL Compatibility")
-boot_splash/image="res://sprites/bricks.db32 (1).png"
 config/icon="res://icon.svg"
 
 [rendering]
