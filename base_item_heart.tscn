@@ -54,19 +54,24 @@ height = 54.0
 script = ExtResource("1_1gihj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(169, 66)
+position = Vector2(168, 64)
 scale = Vector2(3.9375, 3.875)
 sprite_frames = SubResource("SpriteFrames_3qkm2")
 animation = &"new_animation"
 frame_progress = 0.456638
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-28, -31)
 scale = Vector2(52, 54)
 texture = SubResource("MeshTexture_hsevq")
+metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(168, 64)
 shape = SubResource("CapsuleShape2D_2u4gr")
+metadata/_edit_lock_ = true
