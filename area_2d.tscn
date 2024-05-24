@@ -1,7 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bcvhxfpa22hft"]
+[gd_scene load_steps=3 format=3 uid="uid://bcvhxfpa22hft"]
 
 [ext_resource type="Script" path="res://Area2D.gd" id="1_bu65l"]
+[ext_resource type="PackedScene" uid="uid://cyj3x74l5jm8f" path="res://character_body_2d.tscn" id="2_n1wi0"]
 
 [node name="Area2D" type="Area2D"]
+modulate = Color(0.027451, 0.568627, 0, 1)
+position = Vector2(586, 310)
+collision_layer = 16
+collision_mask = 16
 script = ExtResource("1_bu65l")
-next_level = "thundar"
+
+[node name="Player1" parent="." instance=ExtResource("2_n1wi0")]
+z_as_relative = false
+position = Vector2(0, 0)
+input_pickable = true
