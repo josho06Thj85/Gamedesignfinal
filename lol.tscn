@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcpwujvc1nawh"]
+
+[ext_resource type="Texture2D" uid="uid://d3hs2mhvwjojp" path="res://sprites/Slash.png" id="1_1pksx"]
+
+[node name="Slash" type="Sprite2D"]
+position = Vector2(-7640, 14400)
+scale = Vector2(6689.63, 5521.12)
+texture = ExtResource("1_1pksx")
+metadata/_edit_lock_ = true
