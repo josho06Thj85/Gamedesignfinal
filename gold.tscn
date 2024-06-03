@@ -63,19 +63,15 @@ position = Vector2(134.75, 50)
 scale = Vector2(3.53125, 3.5)
 sprite_frames = SubResource("SpriteFrames_xglii")
 animation = &"new_animation"
-metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-7, -8)
 scale = Vector2(13, 16)
 texture = SubResource("MeshTexture_umf8h")
-metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(20, 9)
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(113, 39)
 shape = SubResource("CapsuleShape2D_8wile")
-metadata/_edit_lock_ = true

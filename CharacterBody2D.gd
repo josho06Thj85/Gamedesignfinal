@@ -24,7 +24,7 @@ var charge_start_time = 0.0
 var slash_scene = preload("res://entities/attacks/slash.tscn")
 var menu_scene = preload("res://my_gui.tscn")
 var damage_shader = preload("res://assets/shaders/take_damage.tres")
-var attack_sound = preload("res://assets/sounds/slash.wav")
+var attack_sound = preload("res://assets/sounds/slash.wave")
 var menu_instance = null
 
 @onready var aud_player = $AudioStreamPlayer2D
