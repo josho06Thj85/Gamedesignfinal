@@ -155,7 +155,7 @@ script = ExtResource("1_i6wd8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0.999997, -63.9048)
-scale = Vector2(0, -9.15528e-05)
+scale = Vector2(1e-05, -9.15528e-05)
 sprite_frames = SubResource("SpriteFrames_baji4")
 animation = &"up"
 
@@ -165,5 +165,5 @@ scale = Vector2(1150, 644)
 texture = SubResource("MeshTexture_rpvhp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -58)
+position = Vector2(2, -49)
 shape = SubResource("CapsuleShape2D_q5cb7")
